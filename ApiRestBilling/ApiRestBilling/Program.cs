@@ -35,6 +35,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+//Damos Soporte Cors
+app.UseCors(c=>c
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
 app.UseAuthorization();
 
 app.MapControllers();
